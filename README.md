@@ -112,7 +112,13 @@ Create a sa
 ```Bash
 kubectl create serviceaccount dashboard-sa
 ```
-
+ listet dann die Dateien im Verzeichnis auf, in dem die Anmeldeinformationen des Service-Accounts des Pods gespeichert sind.
+```Bash
+k exec -it my-kubernetes-dashboard ls /var/run/secrets/kubernetes.io/serviceaccount
+```
+```Bash
+k exec -it my-kubernetes-dashboard cat /var/run/secrets/kubernetes.io/serviceaccount
+```
 
 
 
