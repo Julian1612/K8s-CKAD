@@ -119,6 +119,10 @@ k exec -it my-kubernetes-dashboard ls /var/run/secrets/kubernetes.io/serviceacco
 ```Bash
 k exec -it my-kubernetes-dashboard cat /var/run/secrets/kubernetes.io/serviceaccount
 ```
+Dieser Befehl weist der Kubernetes-Deployment namens web-dashboard den Service-Account dashboard-sa zu.
+```Bash
+kubectl set serviceaccount deploy/web-dashboard dashboard-sa
+```
 
 
 
