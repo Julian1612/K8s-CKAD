@@ -91,4 +91,11 @@ Create CM with a file (First create the File)
 ```Bash
 kubectl create -f <file-name>.yaml
 ```
+# Secrets
+imperative
+```Bash
+kubectl create secret generic app-secret --from-literal=DB_Host=mysql --from-literal=DB_User=root --from-literal=DB_Pass=mpaswrd
+```
+Declarative -> create a file and apply
+
 
