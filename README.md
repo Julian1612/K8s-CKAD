@@ -97,5 +97,16 @@ imperative
 kubectl create secret generic app-secret --from-literal=DB_Host=mysql --from-literal=DB_User=root --from-literal=DB_Pass=mpaswrd
 ```
 Declarative -> create a file and apply
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: app-secret
+data:
+  DB_Host: mysql
+  DB_User: root
+  DB_Pass: paswrd 
+```
+
 
 
