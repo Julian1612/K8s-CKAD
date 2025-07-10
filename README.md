@@ -76,7 +76,7 @@ will output the resource definition in YAML format on the screen.
 ```Bash
 kubectl run nginx --image=nginx --dry-run=client -o yaml > nginx-pod.yaml
 ```
-# ConfigMaps
+## ConfigMaps
 Create without a file and add all the infomations manually, the imerative way
 ```Bash
 kubectl create configmap \
@@ -91,7 +91,7 @@ Create CM with a file (First create the File)
 ```Bash
 kubectl create -f <file-name>.yaml
 ```
-# Secrets
+## Secrets
 imperative
 ```Bash
 kubectl create secret generic app-secret --from-literal=DB_Host=mysql --from-literal=DB_User=root --from-literal=DB_Pass=mpaswrd
@@ -107,6 +107,12 @@ data:
   DB_User: root
   DB_Pass: paswrd 
 ```
+## Serviceaccounts
+Create a sa
+```Bash
+kubectl create serviceaccount dashboard-sa
+```
+
 
 
 
