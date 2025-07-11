@@ -7,6 +7,13 @@ Create a new resource from a definition file
 ```Bash
 k apply -f </path/to/file/file.yaml>
 ```
+## Use --dry-run-client to get a minimalistic yaml with only the neccesery defintions
+
+## Usefull Shell commands
+Use grep to search for words in the outputted text like strg + f
+```Bash
+k describe pod mosquito | grep "Node"
+```
 
 ## Pod
 Erstellt einen neuen Pod aus einem Image
