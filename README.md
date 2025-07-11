@@ -7,6 +7,10 @@ Create a new resource from a definition file
 ```Bash
 k apply -f </path/to/file/file.yaml>
 ```
+Dieser Befehl zeigt den Inhalt der Datei /log/app.log aus dem Pod namens app im elastic-stack Namespace an.
+```Bash
+kubectl -n elastic-stack exec -it app -- cat /log/app.log
+```
 ## Use --dry-run-client to get a minimalistic yaml with only the neccesery defintions
 
 ## Usefull Shell commands
