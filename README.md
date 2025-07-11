@@ -123,6 +123,11 @@ Dieser Befehl weist der Kubernetes-Deployment namens web-dashboard den Service-A
 ```Bash
 kubectl set serviceaccount deploy/web-dashboard dashboard-sa
 ```
+## Taints
+fügt einem Kubernetes-Knoten einen "Taint" hinzu, der verhindert, dass Pods ohne eine passende "Tolerierung" auf diesem Knoten geplant werden oder dort verbleiben.
+```Bash
+kubectl taint nodes node-name key=value:taint-effect
+```
 
 
 
