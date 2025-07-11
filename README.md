@@ -14,6 +14,9 @@ Use grep to search for words in the outputted text like strg + f
 ```Bash
 k describe pod mosquito | grep "Node"
 ```
+## Usefull vim commands
+delete the entire content of a page (or file)
+`:%d`
 
 ## Pod
 Erstellt einen neuen Pod aus einem Image
@@ -134,6 +137,12 @@ kubectl set serviceaccount deploy/web-dashboard dashboard-sa
 fügt einem Kubernetes-Knoten einen "Taint" hinzu, der verhindert, dass Pods ohne eine passende "Tolerierung" auf diesem Knoten geplant werden oder dort verbleiben.
 ```Bash
 kubectl taint nodes node-name key=value:taint-effect
+```
+## Label Nodes
+Dieser Befehl fügt dem Kubernetes-Knoten mit dem Namen node-1 ein Label hinzu, das ihn mit size=Large kennzeichnet.
+```Bash
+kubectl label nodes <node-name> <label-key>=<label-value>
+e.g kubectl label nodes node-1 size=Large
 ```
 
 
