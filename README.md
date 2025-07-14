@@ -26,6 +26,11 @@ k describe pod mosquito | grep "Node"
 delete the entire content of a page (or file)
 `:%d`
 
+search for a word or line in the file
+```vim
+/<word you want to search>
+```
+
 ## Pod
 Erstellt einen neuen Pod aus einem Image
 ```Bash
