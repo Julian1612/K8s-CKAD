@@ -7,6 +7,10 @@ Create a new resource from a definition file
 ```Bash
 k apply -f </path/to/file/file.yaml>
 ```
+forcefully replaces a Kubernetes resource by first deleting the existing one and then immediately recreating it using the configuration from the simple-webapp-2.yaml file.
+```Bash
+kubectl replace -f simple-webapp-2.yaml --force
+```
 Dieser Befehl zeigt den Inhalt der Datei /log/app.log aus dem Pod namens app im elastic-stack Namespace an.
 ```Bash
 kubectl -n elastic-stack exec -it app -- cat /log/app.log
