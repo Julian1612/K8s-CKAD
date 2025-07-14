@@ -153,5 +153,17 @@ kubectl label nodes <node-name> <label-key>=<label-value>
 e.g kubectl label nodes node-1 size=Large
 ```
 
+## Rollouts
+Überwacht und zeigt in Echtzeit den Fortschritt des Updates für das Kubernetes-Deployment namens myapp-deployment an, bis es erfolgreich abgeschlossen ist.
+```Bash
+k rollout status deployment/myapp-deployment
+```
+
+Zeigt die gesamte Änderungshistorie mit allen bisherigen Versionen (Revisionen) des Kubernetes-Deployments myapp-deployment an.
+```Bash
+k rollout history deployment/myapp-deploy
+```
+
+
 
 
