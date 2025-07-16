@@ -6,8 +6,8 @@ Required fields for a manifest json
 ### kind
 
 ### metadata
-####name
-####UID
-####namespacep
+### name
+### UID
+### namespacep
 
 ### spec
