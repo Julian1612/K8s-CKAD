@@ -70,13 +70,14 @@ Generate Deployment YAML file (-o yaml). Don't create it(--dry-run)
 ```Bash
 kubectl create deployment --image=nginx nginx --dry-run -o yaml
 ```
+Skaliert die Anzahl der laufenden Instanzen (Pods) für das Deployment "frontend" auf null und stoppt somit die Anwendung vollständig.
 ```Bash
 kubectl create deployment nginx --image=nginx --replicas=4
 kubectl create deployment nginx --image=nginx--dry-run=client -o yaml > nginx-deployment.yaml
 ```
-Skaliert die Anzahl der laufenden Instanzen (Pods) für das Deployment "frontend" auf null und stoppt somit die Anwendung vollständig.
+Scale a deployment
 ```Bash
-kubectl scale deployment frontend --replicas=0
+kubectl scale deployment.v1.apps/rss-site --replicas=5
 ```
 ## Service
 ```Bash
