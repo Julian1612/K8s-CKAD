@@ -90,7 +90,6 @@ kubectl create service clusterip redis --tcp=6379:6379 --dry-run=client -o yaml
 kubectl create service nodeport nginx --tcp=80:80 --node-port=30080 --dry-run=client -o yaml
 ```
 
-
 ## Imerative Commands
 as soon as the command is run, the resource will be created. If you simply want to test your command, use the --dry-run=client option. This will not create the resource. Instead, tell you whether the resource can be created and if your command is right.
 ```Bash
@@ -173,6 +172,12 @@ Zeigt die gesamte Änderungshistorie mit allen bisherigen Versionen (Revisionen)
 ```Bash
 k rollout history deployment/myapp-deploy
 ```
+
+## Enter Shell of a container of a Pod
+```Bash
+k exec -it -n elastic-stack app -- /bin/bash
+```
+
 
 
 
